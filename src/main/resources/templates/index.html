@@ -1,17 +1,60 @@
 <!DOCTYPE html>
-<html>
+<html html xmlns="http://www.w3.org/1999/xhtml​"
+xmlns:th="http://www.thymeleaf.org​"
+xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout​">
 
 <head>
 	<meta charset="ISO-8859-1">
-	<title>Spring MVC</title>
-	<link rel="stylesheet" href="css/index.css">
+	<title>Cadastrar</title>
+	<link rel="stylesheet" th:href="@{/css/index.css}">
 </head>
 
 <body>
-	<div id="myForm">
-		aaaaa
-		<div class="align-right"><a><button>See Users</button></a></div>
+	<div class="align-right"><a th:href="@{/usuarios}"><button>Usuários</button></a></div>
+	
+	<div class="align-center">
+		<h1>Cadastrar usuário</h1>	
 	</div>
+	<hr>
+
+	<div id="myForm" class="align-center">
+		<fieldset>
+			<label for="inputNome">Nome</label><br>
+			<input type="text" id="inputNome" name="inputNome" autofocus>
+			<br><br>
+			
+			<label for="inputEmail">Email</label><br>
+			<input type="email" id="inputEmail" name="inputEmail">
+			<br><br>
+			
+			<label for="inputPassword">Senha</label><br>
+			<input type="password" id="inputPassword" name="inputPassword">
+		</fieldset>
+		
+		<h2>Endereço</h2>
+		
+		<fieldset style="margin-top: 10px;">
+			<label for="inputCep">CEP: </label>
+			<input type="text" id="inputCep" name="inputCep">
+			<button onclick="buscarCep()">GO</button>
+			<br><br>
+			
+			<label for="inputRua">Rua</label><br>
+			<input type="text" id="inputRua" name="inputRua">
+			<br><br>
+			
+			<label for="inputBairro">Bairro</label><br>
+			<input type="text" id="inputBairro" name="inputBairro">
+			<br><br>
+			
+			<label for="inputCidade">Cidade</label><br>
+			<input type="text" id="inputCidade" name="inputCidade">
+		</fieldset>
+		
+		<br>
+		<button onclick="cadastrarUsuario()" id="botaoCadastro">Cadastrar</button>
+	</div>
+		
 </body>
 
 </html>

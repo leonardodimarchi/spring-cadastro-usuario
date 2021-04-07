@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html html xmlns="http://www.w3.org/1999/xhtml​"
+xmlns:th="http://www.thymeleaf.org​"
+xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout​">
+
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Usuarios</title>
+
+	<!-- Alterar !!! -->
+	<link rel="stylesheet" href="../static/css/usuarios.css">
+</head>
+
+<body>
+	<div class="align-right"><a th:href="@{/}"><button>Cadastrar Usuários</button></a></div>
+
+	<div class="align-center">
+		<h1>Usuários cadastrados</h1>
+	</div>
+
+	<div class="align-center">
+		<table>
+			<thead>
+				<tr>
+					<th>Id</th>
+					<th>Email</th>
+					<th>Senha</th>
+					<th>Cep</th>
+					<th>Endereço</th>
+				</tr>
+			</thead>
+	
+			<tbody id="bodyTodosUsuarios"></tbody>
+		</table>
+	</div>
+</body>
+
+</html>
