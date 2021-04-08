@@ -10,14 +10,15 @@ xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout​">
 </head>
 
 <body>
-	<div class="align-right"><a th:href="@{/usuarios}"><button>Usuários</button></a></div>
+	<div class="align-center"><a th:href="@{/usuarios}"><button class="botaoNavegacao">Usuários</button></a></div>
 	
-	<div class="align-center">
+	<div id="myForm" class="align-center">
+	
+	<div>
 		<h1>Cadastrar usuário</h1>	
 	</div>
 	<hr>
-
-	<div id="myForm" class="align-center">
+	
 		<fieldset>
 			<label for="inputNome">Nome</label><br>
 			<input type="text" id="inputNome" name="inputNome" autofocus>
@@ -52,7 +53,7 @@ xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout​">
 		</fieldset>
 		
 		<br>
-		<button onclick="cadastrarUsuario()" id="botaoCadastro">Cadastrar</button>
+		<button onclick="cadastrarUsuario()" class="botaoConfirmacao">Cadastrar</button>
 	</div>
 		
 </body>

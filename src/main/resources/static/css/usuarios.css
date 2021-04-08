@@ -1,9 +1,20 @@
-.align-right{
-	text-align: right;
-}
-
 .align-center{
 	text-align: center;
+}
+
+section{
+	margin: 10px 50px 0px 50px;
+	background-color: #e6e6e6;
+	border: solid 5px black;
+	border-radius: 10px;
+	padding: 0px 20px 20px 20px;
+}
+
+.botaoNavegacao{
+	padding: 10px;
+	color: white;
+	font-weight: bold;
+	background-color: blue;
 }
 
 table{
