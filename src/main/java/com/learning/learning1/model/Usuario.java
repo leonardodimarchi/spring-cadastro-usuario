@@ -12,15 +12,15 @@ import javax.persistence.Table;
 @Table(name = "USUARIOS")
 public class Usuario {
 
-@Id
-@GeneratedValue(strategy = GenerationType.IDENTITY)
-private Long id;
-private String nome;
-private String email;
-private String senha;
-
-@OneToOne(cascade = CascadeType.ALL)
-private Endereco endereco;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
+	private String nome;
+	private String email;
+	private String senha;
+	
+	@OneToOne(cascade = CascadeType.ALL)
+	private Endereco endereco;
 	
 	//Getters e Setters
 	public Long getId() {

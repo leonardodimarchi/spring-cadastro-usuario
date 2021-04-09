@@ -27,21 +27,22 @@ $.ajax({
 function editarUsuario(){
 	var idBotao = $(event.currentTarget).attr('value')
 	
-	if(confirm("Deseja mesmo excluir o usuario "+idBotao+" ?") == true){
-		window.location.href="/index/editar/"+idBotao	
-	}
+	window.location.href="/index/editar/"+idBotao	
 	
 }
 
 function excluirUsuario(){
 	var idBotao = $(event.currentTarget).attr('value')
 	
-	$.ajax({
-		url:`/usuarios/excluir/${idBotao}`,
-		type:"PUT"
-	}).done(e=>{
-		window.location.href="/usuarios"
-	}).fail(()=>{
-		alert("Falha no ajax - Exclusao de Usuarios (usuarios.js)")
-	})
+	if(confirm("Deseja mesmo excluir o usuario "+idBotao+" ?") == true){
+		$.ajax({
+			url:`/usuarios/excluir/${idBotao}`,
+			type:"PUT"
+		}).done(e=>{
+			window.location.href="/usuarios"
+		}).fail(()=>{
+			alert("Falha no ajax - Exclusao de Usuarios (usuarios.js)")
+		})
+	}
+	
 }
