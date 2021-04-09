@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
@@ -29,5 +30,12 @@ public class UsuariosController {
 	@ResponseBody
 	public List<Usuario> mostrarUsuarios(){
 		return usuarios.findAll();
+	}
+	
+	@RequestMapping("/excluir/{id}")
+	@ResponseBody
+	public String excluirUsuario(@ModelAttribute("id") Usuario usuario) {
+		usuarios.delete(usuario);
+		return "200";
 	}
 }
