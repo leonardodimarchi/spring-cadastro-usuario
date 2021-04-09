@@ -7,6 +7,7 @@ xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout​">
 	<meta charset="ISO-8859-1">
 	<title>Cadastrar</title>
 	<link rel="stylesheet" th:href="@{/css/index.css}">
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -15,7 +16,7 @@ xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout​">
 	<div id="myForm" class="align-center">
 	
 	<div>
-		<h1>Cadastrar usuário</h1>	
+		<h1 id="titulo">Cadastrar usuário</h1>	
 	</div>
 	<hr>
 	
@@ -28,8 +29,8 @@ xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout​">
 			<input type="email" id="inputEmail" name="inputEmail">
 			<br><br>
 			
-			<label for="inputPassword">Senha</label><br>
-			<input type="password" id="inputPassword" name="inputPassword">
+			<label for="inputSenha">Senha</label><br>
+			<input type="password" id="inputSenha" name="inputSenha">
 		</fieldset>
 		
 		<h2>Endereço</h2>
@@ -57,9 +58,10 @@ xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout​">
 		</fieldset>
 		
 		<br>
-		<button onclick="cadastrarUsuario()" class="botaoConfirmacao">Cadastrar</button>
+		<button id="botaoCadastrar" onclick="cadastrarUsuario()" class="botaoConfirmacao">Cadastrar</button>
 	</div>
 		
+	<script th:src="@{/js/index.js}" ></script>
 </body>
 
 </html>

@@ -15,7 +15,7 @@ public class Usuario {
 @Id
 @GeneratedValue(strategy = GenerationType.IDENTITY)
 private Long id;
-private String name;
+private String nome;
 private String email;
 private String senha;
 
@@ -29,11 +29,11 @@ private Endereco endereco;
 	public void setId(Long id) {
 		this.id = id;
 	}
-	public String getName() {
-		return name;
+	public String getNome() {
+		return nome;
 	}
-	public void setName(String name) {
-		this.name = name;
+	public void setNome(String name) {
+		this.nome = name;
 	}
 	public String getEmail() {
 		return email;
